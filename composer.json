@@ -1,0 +1,12 @@
+{
+  "autoload": {
+    "psr-4": {
+      "Attendance\\": "src/",
+      "Attendance\\Tests\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.2",
+    "cakephp/chronos": "@stable"
+  }
+}

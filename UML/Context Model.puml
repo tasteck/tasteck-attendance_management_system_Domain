@@ -1,0 +1,25 @@
+@startuml
+left to right direction
+rectangle {
+    Actor 経営者
+    rectangle システムに直接関わる人{
+        Actor 従業員
+        Actor 管理職
+        経営者 -- 従業員
+        経営者 -- 管理職
+
+        usecase (勤怠管理システム) as core
+        component 給与システム as payrol
+
+        従業員 -- core
+        管理職 -- core
+        core -- payrol
+
+        note top of core
+            従業員の勤怠管理を楽にする
+            残業時間や、総労働時間の確認などが用意になる
+            管理職は従業員の働きすぎを検知できる
+        end note
+    }
+}
+@enduml
